@@ -3,7 +3,7 @@ window.onload = init()
 function init() {
     let httpRequest
     
-    function makeRequest() {
+    function initialRequest() {
         httpRequest = new XMLHttpRequest()
 
         if (!httpRequest) {
@@ -42,7 +42,7 @@ function init() {
             if (item.hasOwnProperty(item)) {
                 cards += `<div class="card mb-4 shadow-sm">
                                 <div class="card-header">
-                                    <h4 class="my-0 font-weight-normal">${items}</h4>
+                                    <h4 class="my-0 font-weight-normal">Horrible Chuck Jokes</h4>
                                 </div>
                                 <div class="card-body">
                                     <h1 class="card-title pricing-card-title">${items}</h1>
@@ -55,5 +55,7 @@ function init() {
     }
 
     initialRequest()
+    
 }
+setInterval(init, 5000);
 
